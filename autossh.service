@@ -1,12 +1,12 @@
 [Unit]
-Description=AutoSSHd permanent ssh tunnels 
+Description=Autossh permanent ssh tunnels
 After=network.target
 
 [Service]
 Type=forking
 
 Environment="AUTOSSH_GATETIME=0"
-ExecStart=/root/autossh/autosshd /etc/autossh/tunnels.conf
+ExecStart=/usr/bin/autosshd /etc/autossh/tunnels.conf
 
 
 [Install]
