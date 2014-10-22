@@ -1,7 +1,7 @@
 Usage
 -----
 
-Script for permanent start multiple tunnels with simple conf file. 
+Script start multiple ssh tunnels with autossh and simple conf file. 
 
 
 ```
@@ -17,4 +17,13 @@ systemctl enable autossh.service
 systemctl start autossh.service
 
 ```
+
+Configuration file
+------------------
+
+Read file `tunnels.conf` and start autossh process for each line (expect comments).
+
+
+
+
 
