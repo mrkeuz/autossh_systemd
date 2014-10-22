@@ -27,8 +27,4 @@ for tun in tunnels:
     subprocess.Popen(next_tun_cmd.split())
 
 
-
-
-
-
-
+sys.exit(0)
