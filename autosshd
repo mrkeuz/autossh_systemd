@@ -1,0 +1,33 @@
+#!/usr/bin/python
+
+__author__ = 'petrv'
+
+import subprocess
+import sys
+
+
+if sys.argv[1]:
+    config_file = sys.argv[1]
+else:
+    config_file = '/etc/autossh/tunnels.conf'
+
+
+# Read ssh tunnels from conf
+with open(config_file) as f:
+    tunnels = filter(None, f.read().splitlines())
+
+# Prepare start lines
+for tun in tunnels:
+    #skip commented
+    if tun.strip().startswith("#"):
+        continue
+
+    next_tun_cmd = "/usr/bin/autossh -M 0 -o TCPKeepAlive=yes %s " + tun
+    subprocess.Popen(next_tun_cmd.split())
+
+
+
+
+
+
+
