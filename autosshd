@@ -22,7 +22,7 @@ for tun in tunnels:
     if tun.strip().startswith("#"):
         continue
 
-    next_tun_cmd = "/usr/bin/autossh -M 0 -o TCPKeepAlive=yes %s " + tun
+    next_tun_cmd = "/usr/bin/autossh -M 0 -o TCPKeepAlive=yes " + tun
     print("Run: " + next_tun_cmd)
     subprocess.Popen(next_tun_cmd.split())
 
