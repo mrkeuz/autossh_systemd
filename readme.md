@@ -9,7 +9,7 @@ mkdir -p /etc/autossh/
 
 cd autossh_systemd
 
-cp tunnels.conf /etc/autossh/
+cp autosshd.conf /etc/autossh/
 cp autosshd /usr/bin
 cp autossh.service /usr/lib/systemd/system/autossh.service
 
