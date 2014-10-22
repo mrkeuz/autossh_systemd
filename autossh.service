@@ -6,7 +6,7 @@ After=network.target
 Type=forking
 
 Environment="AUTOSSH_GATETIME=0"
-ExecStart=/root/autossh/autosshd /etc/autossh/autossh.conf
+ExecStart=/root/autossh/autosshd /etc/autossh/tunnels.conf
 
 
 [Install]
