@@ -23,6 +23,7 @@ for tun in tunnels:
         continue
 
     next_tun_cmd = "/usr/bin/autossh -M 0 -o TCPKeepAlive=yes %s " + tun
+    print("Run: " + next_tun_cmd)
     subprocess.Popen(next_tun_cmd.split())
 
 
